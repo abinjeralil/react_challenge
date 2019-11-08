@@ -1,0 +1,38 @@
+
+.white-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 121;
+    flex-wrap: nowrap;
+    border-bottom: 5px solid rgb(204, 204, 204);
+
+    margin-bottom: 0;
+    border-radius: 0;
+    z-index: 1050;
+    border: 0;
+    padding: 0;
+    min-height: 55px;
+    background-color: #fff;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.options-icon {
+    float: left;
+    width: 33.33%;
+    font-size: 16px;
+}
+
+.header-logo {
+    text-align: center;
+    width: 33.33%;
+}
+
+.logged-in-user {
+    text-align: right;
+    float: right;
+    width: 33.33%;
+    font-size: 16px;
+}

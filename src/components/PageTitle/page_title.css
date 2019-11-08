@@ -1,0 +1,19 @@
+.title-container {
+    margin-top: 55px;
+    margin-left: 70px;
+    transition: margin-left .2s cubic-bezier(.35,0,.25,1);
+    position: relative;
+    z-index: 111;
+    background-color: #f5f7fa;
+    margin-bottom: 60px!important;
+    display: block;
+    padding: 20px;
+    width: 100%;
+    border-top: 1px solid rgba(0,0,0,.15);
+    margin-top: -1px;
+}
+
+.title-heading {
+    margin: -20px -20px 0px !important;
+    padding: 10px !important;
+}
