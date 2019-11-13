@@ -8,6 +8,6 @@
     height: 60px;
     border-top: 1px solid #e4eaec;
     padding: 20px;
-    z-index: 109;
+    z-index: 9999 !important;
     font-size: .875rem;
 }

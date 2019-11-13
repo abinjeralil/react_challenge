@@ -1,0 +1,88 @@
+aside {
+    display: block;
+}
+
+*,
+ :after,
+ :before {
+    box-sizing: border-box;
+}
+
+.aside-container {
+    position: absolute;
+    width: 220px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 116;
+    transition: width .2s cubic-bezier(.35, 0, .25, 1), translate .2s cubic-bezier(.35, 0, .25, 1);
+    backface-visibility: hidden;
+    background-color: #fff;
+}
+
+.aside-inner {
+    padding-top: 55px;
+    height: 100%;
+    width: 220px;
+    overflow: hidden;
+    transition: width .2s cubic-bezier(.35, 0, .25, 1);
+}
+
+.sidebar:not(.show-scrollbar) {
+    margin-right: -17px;
+    overflow-y: scroll;
+}
+
+.sidebar {
+    height: 100%;
+    padding-bottom: 20px;
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+.sidebar-nav {
+    position: relative;
+    font-size: 14px;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+    margin-top: 0;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.sidebar-nav>li.active {
+    border-left-color: #bb7b03;
+    background-color: #fcfcfc;
+    color: #bb7b03;
+}
+
+.sidebar-nav>li {
+    display: block;
+    border-left: 3px solid transparent;
+    -webkit-transition: border-left-color .4s ease;
+    transition: border-left-color .4s ease;
+}
+
+.sidebar .sidebar-nav>li>a {
+    -webkit-animation: fadeInLeft .5s;
+    animation: fadeInLeft .5s;
+    position: relative;
+    display: block;
+    padding: 12px 24px;
+    color: #515253;
+    letter-spacing: .025em;
+    font-weight: 400;
+    cursor: pointer;
+    white-space: nowrap;
+    outline: none!important;
+}
+
+.sidebar>.sidebar-nav>li>a>span {
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}

@@ -7,7 +7,7 @@ const buildPath = path.resolve(__dirname, './../dist/');
 // const HOST = process.env.HOST || '127.0.0.1';
 // const PORT = process.env.PORT || '9000';
 
-const HOST = '127.0.0.1';
+const HOST = 'localhost';
 const PORT = '9000';
 
 // require('dotenv').config();
