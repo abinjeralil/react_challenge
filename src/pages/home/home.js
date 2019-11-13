@@ -9,7 +9,7 @@ class Home extends React.Component {
 	render() {
 		return (
 			<div className="common-wrapper">
-				<Header />
+				<Header page="home" />
 				<Content />
 				<Footer />
 			</div>

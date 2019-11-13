@@ -16,14 +16,18 @@ class Report1 extends React.Component {
 			error: null,
 			isLoaded: false,
 			reportData: [],
-			selectedMenu: "1",
 			reportEndUrl: "report1"
 		}
 
-		this.switchReportEndUrl = this.switchReportEndUrl.bind(this);
+		this.switchReport = this.switchReport.bind(this);
+		this.fetchSelectedReport = this.fetchSelectedReport.bind(this);
 	}
 
 	componentDidMount() {
+		this.fetchSelectedReport();
+	}
+
+	fetchSelectedReport() {
 		const reportUrl = BASE_URL + this.state.reportEndUrl + "/";
 		fetch(reportUrl)
 		.then((response) => response.json())
@@ -43,10 +47,11 @@ class Report1 extends React.Component {
 		});
 	}
 
-	switchReportEndUrl = (report_id) => {
+	switchReport(event, report_id) {
 		this.setState({
 			reportEndUrl: ("report" + report_id),
-			selectedMenu: report_id
+		}, () => {
+			this.fetchSelectedReport();
 		});
 	}
 
@@ -62,8 +67,8 @@ class Report1 extends React.Component {
 		}
 		return (
 			<div className="common-wrapper">
-				<Header />
-				<SideNavBar selected={selectedMenu} switchReportEndUrl={switchReportEndUrl} />
+				<Header page="reports"/>
+				<SideNavBar selected={selectedMenu} switchReport={this.switchReport}/>
 				{reportContent}
 				<Footer />
 			</div>
